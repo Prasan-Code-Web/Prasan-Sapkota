@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100vw;
+        }
+
+        body {
+            background-color: #457B9D;
+            color: white;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 35px;
+            background-color: rgba(4, 2, 41, 0.753);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+        }
+
+        .left {
+            font-size: 1rem;
+            color: white;
+            font-size: 30px;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 5vw;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 8vw 0;
+            flex-wrap: wrap;
+        }
+
+        .firstSection>div {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+            margin: 30px 0;
+            color: #c2c5aa;
+            width: 100%;
+        }
+
+        .rightSection img {
+            width: 100%;
+            max-width: 300px;
+            margin: 30px 0;
+            border-radius: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .purple {
+            color: #f8961e;
+        }
+
+        #element {
+            color: #f8961e;
+        }
+
+        .secondSection {
+            max-width: 90vw;
+            margin: auto;
+            min-height: 60vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.7rem;
+        }
+
+        body {
+            font-family: "Roboto Slab", serif;
+            font-weight: 300;
+            font-style: normal;
+            margin: 0px;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 100%;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 8vw;
+            position: relative;
+        }
+        .image-top{
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+            border-radius: 10px;
+        }
+        .vertical-title{
+            position: relative;
+            top: 75px;
+            width: 150px;
+            background-color: #0D7CC2;
+            padding: 10px;
+            border: 4px solid #002ca7;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .vertical-desc{
+           position: relative;
+           top: 86px;
+           color: gray;
+           width: 150px;
+           font-size: 0.8rem;
+        }
+        footer{
+            background-color: #0D7CC2;
+            min-height: 233px;
+        }
+        .footer{
+         display: flex; 
+         flex-wrap: wrap;
+         padding: 23px 5vw;  
+         justify-content: space-evenly;
+        }
+        .footer-second{
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        .footer-second a{
+            text-decoration: none;
+            color: white;
+        }
+        .footer-second a:hover{
+            color: #002ca7;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer > div {
+           width: 223px; 
+        }
+        footer .text-center{
+            text-align: center ;
+            padding: 12px ;
+        }
+
+        /* Projects Section */
+        .projectsSection {
+            max-width: 1100px;
+            margin: 60px auto 0 auto;
+            padding: 0 5vw 40px 5vw;
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+        }
+        .project-card {
+            background: #0D7CC2;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px 18px;
+            width: 300px;
+            max-width: 90vw;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        }
+        .project-card img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .project-card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f8961e;
+        }
+        .project-card p {
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+        /* Results Section */
+        .resultsSection {
+            max-width: 1100px;
+            margin: 60px auto 0 auto;
+            padding: 0 5vw 40px 5vw;
+        }
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+        }
+        .result-card {
+            background: #0D7CC2;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px 18px;
+            width: 300px;
+            max-width: 90vw;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .result-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+        }
+        .result-card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f8961e;
+        }
+        .result-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .result-card li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #ffe066;
+            font-weight: bold;
+        }
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+                margin: 5vw 0;
+            }
+            .firstSection>div {
+                width: 95vw;
+                max-width: 100%;
+                text-align: center;
+            }
+            .leftSection {
+                font-size: 2rem;
+            }
+            .secondSection .box {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+            .secondSection .vertical {
+                margin: 30px 0;
+                height: 93px;
+            }
+            .vertical-title, .vertical-desc {
+                left: 0;
+                width: 90vw;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 23px 5vw;
+            }
+            .footer > div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .projects-container {
+                gap: 20px;
+            }
+            .project-card {
+                width: 90vw;
+                max-width: 400px;
+                padding: 18px 8px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li a {
+                font-size: 1.1rem;
+                padding: 16px 0;
+                display: block;
+            }
+            .left {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            .firstSection {
+                margin: 30px 0;
+            }
+            .leftSection {
+                font-size: 1.2rem;
+            }
+            .rightSection img {
+                max-width: 180px;
+            }
+            .secondSection h1 {
+                font-size: 1.1rem;
+            }
+            .vertical-title, .vertical-desc {
+                font-size: 0.9rem;
+                width: 95vw;
+                max-width: 200px;
+            }
+            .footer {
+                padding: 10px 2vw;
+            }
+            .footer > div {
+                margin-bottom: 10px;
+            }
+            footer .text-center {
+                font-size: 0.9rem;
+            }
+            .projectsSection {
+                padding: 0 2vw 30px 2vw;
+            }
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+            .project-card {
+                width: 98vw;
+                max-width: 340px;
+                padding: 14px 4px;
+            }
+            .project-card img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body background="background.png">
+    <header>
+        <nav>
+            <div class="left">Prasan Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact_us.htmls">Contact Me</a> </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+  
+    <main>
+
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My Name is<span class="purple"> Prasan</span>
+                <div>
+                    and I am a Passionate
+                </div>
+                <!-- <div>Web Developer </div> -->
+                <span id="element"></span>
+
+            </div>
+            <div class="rightSection">
+                <img src="ChatGPT Image Jun 23, 2025, 10_39_00 AM.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray"> What I have done so Far</span>
+            <h1>Work Experience </h1>
+            <div class="box">
+
+                <!-- <hr style="height: 2px; background-color: white;"> -->
+                <div class="vertical">
+                    <img src="ChatGPT Image Jun 24, 2025, 11_27_11 AM.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Internship from 2010-2012
+                    </div>
+                    <div class="vertical-desc">
+                      <!-- As an HTML Developer, I was responsible for 
+                      building and maintaining the structure and layout of
+                       web pages using clean, standards-compliant HTML. 
+                       I worked closely with designers to translate visual 
+                       concepts into responsive, browser-compatible pages, e`nsuring accessibility and usability.  -->
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="pngwing.com.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Front End Developer 2012-2014
+                    </div>
+                    <div class="vertical-desc">
+                     <!-- As an early adopter of Node.js, I was responsible for building and maintaining scalable server-side
+                      applications using JavaScript and asynchronous programming principles. My role involved developing
+                       RESTful APIs, integrating databases such as MongoDB and MySQL, and optimizing backend performance 
+                       for real-time applications. I collaborated clo
+                     sely with front-end developers and UI/UX teams to deliver responsive, efficient web solutions -->
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="instagram.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        BackEnd  Developer 2014-2016
+                    </div>
+                    <div class="vertical-desc">
+                      <!-- As an HTML Developer, I was responsible for 
+                      building and maintaining the structure and layout of
+                       web pages using clean, standards-compliant HTML. 
+                       I worked closely with designers to translate visual 
+                       concepts into responsive, browser-compatible pages, ensuring accessibility and usability.  -->
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="twiter.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Full- Stack Developer 2016-2018
+                    </div>
+                    <!-- <div class="vertical-desc">
+                      As an HTML Developer, I was responsible for 
+                      building and maintaining the structure and layout of
+                       web pages using clean, standards-compliant HTML. 
+                       I worked closely with designers to translate visual 
+                       concepts into responsive, browser-compatible pages, ensuring accessibility and usability.  -->
+                    </div>
+                </div>
+                <!-- <div class="vertical">
+                    <img src="facebook.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Node.js Developer 2018-2025
+                    </div>
+                    <div class="vertical-desc">
+                      <!-- As an HTML Developer, I was responsible for 
+                      building and maintaining the structure and layout of
+                       web pages using clean, standards-compliant HTML. 
+                       I worked closely with designers to translate visual 
+                       concepts into responsive, browser-compatible pages, ensuring accessibility and usability.  
+                    </div> -->
+                </div>
+                
+            </div>
+        </section>
+        <!-- Projects Section Start -->
+        <section class="projectsSection">
+            <h1 style="text-align:center; margin-bottom: 30px;">My Projects</h1>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="PngItem_1127587.png" alt="Project 1 icon">
+                    <h2>Personal Portfolio Website</h2>
+                    <p>A modern, responsive portfolio website to showcase my skills, experience, and projects. Built with HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project-card">
+                    <img src="png-transparent-logo-html-html5.png" alt="Project 2 icon">
+                    <h2>HTML5 Landing Page</h2>
+                    <p>A clean and attractive landing page template using HTML5 and CSS3, optimized for all devices and easy to customize.</p>
+                </div>
+                <div class="project-card">
+                    <img src="prasan_img_2-removebg-preview.png" alt="Project 3 icon">
+                    <h2>Image Gallery App</h2>
+                    <p>A responsive image gallery web app with filtering and lightbox features, built for a seamless user experience.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section End -->
+        <hr>
+        <!-- Results Section Start -->
+        <section class="resultsSection">
+            <h1 style="text-align:center; margin-bottom: 30px;">Results & Achievements</h1>
+            <div class="results-container">
+                <div class="result-card">
+                    <h2>Exam Results</h2>
+                    <ul>
+                        <li>2024 Board Exam: <span class="highlight">92%</span></li>
+                        <li>2023 Semester 2: <span class="highlight">A+</span></li>
+                        <li>2023 Semester 1: <span class="highlight">A</span></li>
+                    </ul>
+                </div>
+                <div class="result-card">
+                    <h2>Project Results</h2>
+                    <ul>
+                        <li>Portfolio Website: <span class="highlight">Completed</span></li>
+                        <li>Image Gallery App: <span class="highlight">Top 5 in Class</span></li>
+                        <li>Landing Page: <span class="highlight">Best Design Award</span></li>
+                    </ul>
+                </div>
+                <div class="result-card">
+                    <h2>Awards</h2>
+                    <ul>
+                        <li>Best Student Developer 2024</li>
+                        <li>Web Design Competition Winner 2023</li>
+                        <li>Certificate of Excellence in Coding</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Results Section End -->
+        <hr>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <h3>Prasan's Developer Portfolio</h3>
+            <div class="footer-first"> </div>
+            <div class="footer-second">
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact_us.html">Contact Me</a> </li>
+
+                </ul>
+                </div>
+            <div class="footer-fourth">
+                 <ul>
+                <li>Phone:9765664857</li>
+                <li>Email:xrasansapkota@gmail.com</li>
+                <li>facebook:Prasan Sapkota</li>
+                <li>Instagram:@Prasan1</li>
+            </ul>
+            </div>
+        </div>
+        <div class="text-center">
+            <br>
+            <br>
+            <br>
+            www.Prasan Sapkota.com | All right reserved 
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Software Engineer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
